@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "easylearn"
+  "defaultProject": "easylearn",
+  "cli": {
+    "analytics": false
+  }
 }
