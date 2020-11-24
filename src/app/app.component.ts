@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,11 @@ export class AppComponent {
   title = 'easylearn';
 
   constructor(private updates: SwUpdate) {
+    interval(10000).subscribe(() => {
+      console.log('interval');
+      this.updates.checkForUpdate();
+    });
+
     this.updates.available.subscribe((event) => {
       console.log(event);
       this.updates
