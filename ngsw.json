@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1606235655784,
+  "timestamp": 1606295699355,
   "index": "/easylearn/index.html",
   "assetGroups": [
     {
@@ -11,14 +11,14 @@
         "ignoreVary": true
       },
       "urls": [
-        "/easylearn/4.7a96db59a7cb7e602fbe.js",
+        "/easylearn/4.c9d3bcc7dc322f39e503.js",
         "/easylearn/favicon.ico",
         "/easylearn/index.html",
-        "/easylearn/main.620f250beb041675dfdf.js",
+        "/easylearn/main.e736df787cb91ed71bd4.js",
         "/easylearn/manifest.webmanifest",
         "/easylearn/polyfills.bf99d438b005d57b2b31.js",
-        "/easylearn/runtime.b9ed2544ecfdbcd3a2ed.js",
-        "/easylearn/styles.a9b24a49a3e0f472336c.css"
+        "/easylearn/runtime.f629fc681114c8973ff9.js",
+        "/easylearn/styles.b8935c12f6db3f1f4b5e.css"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/.*"
@@ -46,7 +46,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/easylearn/4.7a96db59a7cb7e602fbe.js": "4bce96367c441788557502f50a6d43714996c034",
+    "/easylearn/4.c9d3bcc7dc322f39e503.js": "7b24144c9f2505935f5e8edf17d11e93da76e76e",
     "/easylearn/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/easylearn/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/easylearn/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -56,12 +56,12 @@
     "/easylearn/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/easylearn/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/easylearn/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/easylearn/index.html": "679d7a257b0c7875c4811647bd9cbd29c66fc7be",
-    "/easylearn/main.620f250beb041675dfdf.js": "4e7c325c7f218850567a47a5d15cc4d4c8730ba5",
+    "/easylearn/index.html": "adde1bc40be1aeed7899504f9f93bda7d29b8eb1",
+    "/easylearn/main.e736df787cb91ed71bd4.js": "d4de45c1d1c17f3d2a33b472e3fecef150d3bfc2",
     "/easylearn/manifest.webmanifest": "5bf68e8f7c8a68ed81f793068c75d54226dfb197",
     "/easylearn/polyfills.bf99d438b005d57b2b31.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
-    "/easylearn/runtime.b9ed2544ecfdbcd3a2ed.js": "29978029ab09fd1b2fc2af7a7fa00c73a59026c1",
-    "/easylearn/styles.a9b24a49a3e0f472336c.css": "f5fb1238ea15c399c37f482d1773639b050a5dc4"
+    "/easylearn/runtime.f629fc681114c8973ff9.js": "e8b1d854c94531866750c35f0499c8def06e6f1f",
+    "/easylearn/styles.b8935c12f6db3f1f4b5e.css": "138d8d46db68cc0edc9b8e6079aa9dc34d6b0f8e"
   },
   "navigationUrls": [
     {
