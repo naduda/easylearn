@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
   onbeforeinstallprompt(e: any) {
     console.log('beforeinstallprompt caught', e);
     // Prevent Chrome 67 and earlier from automatically showing the prompt
-    e.preventDefault();
+    // e.preventDefault();
     // Stash the event so it can be triggered later.
     this.deferredPrompt = e;
     this.showButton = true;
