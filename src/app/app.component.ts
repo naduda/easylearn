@@ -28,8 +28,7 @@ export class AppComponent implements OnInit{
     private updates: SwUpdate,
     private platform: Platform
   ) {
-    alert('IOS ' + this.platform.IOS);
-    console.log(this.platform);
+    console.log('platform', this.platform);
     interval(10000).subscribe(() => {
       console.log('interval');
       this.updates.checkForUpdate();
