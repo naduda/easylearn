@@ -36,28 +36,12 @@ export class AppComponent implements OnInit{
     this.isMobile = this.platform.IOS || this.platform.ANDROID;
 
     console.log('isMobile - ', this.isMobile, this.platform);
-    console.log(window.matchMedia('(display-mode: standalone)'));
-
-    if (this.platform.IOS) {
-      const isInStandaloneMode = ('standalone' in window.navigator) && (window.navigator['standalone']);
-      console.log(isInStandaloneMode);
-      if (!isInStandaloneMode) {
-        // this.openPromptComponent('ios');
-      }
-
-
-    }
 
     breakpointObserver.observe([
       '(display-mode: standalone)'
     ]).subscribe((state: BreakpointState) => {
       this.isPwa = state.breakpoints['(display-mode: standalone)'];
       console.log('isPwa - ', this.isPwa);
-      if (window.navigator && window.navigator?.vibrate) {
-      window?.navigator?.vibrate([100, 50, 100]);
-
-      }
-
     });
 
 
@@ -94,6 +78,12 @@ export class AppComponent implements OnInit{
         }
         this.deferredPrompt = null;
       });
+  }
+
+  vibrate(): void {
+    if (window.navigator && window.navigator?.vibrate) {
+      window?.navigator?.vibrate([100, 50, 100]);
+    }
   }
 
   ngOnInit(): void {
