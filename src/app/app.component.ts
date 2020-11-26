@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { interval } from 'rxjs';
 import { Platform } from '@angular/cdk/platform';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +15,11 @@ export class AppComponent implements OnInit{
   deferredPrompt: any;
   showButton = false;
 
+  isMobile: boolean;
+  isPwa = false;
+
   @HostListener('window:beforeinstallprompt', ['$event'])
-  onbeforeinstallprompt(e: any) {
+  onbeforeinstallprompt(e: any): void {
     console.log('beforeinstallprompt caught', e);
     // Prevent Chrome 67 and earlier from automatically showing the prompt
     // e.preventDefault();
@@ -26,10 +30,38 @@ export class AppComponent implements OnInit{
 
   constructor(
     private updates: SwUpdate,
-    private platform: Platform
+    private platform: Platform,
+    private breakpointObserver: BreakpointObserver,
   ) {
-    console.log('platform', this.platform);
-    interval(10000).subscribe(() => {
+    this.isMobile = this.platform.IOS || this.platform.ANDROID;
+
+    console.log('isMobile - ', this.isMobile, this.platform);
+    console.log(window.matchMedia('(display-mode: standalone)'));
+
+    if (this.platform.IOS) {
+      const isInStandaloneMode = ('standalone' in window.navigator) && (window.navigator['standalone']);
+      console.log(isInStandaloneMode);
+      if (!isInStandaloneMode) {
+        // this.openPromptComponent('ios');
+      }
+
+
+    }
+
+    breakpointObserver.observe([
+      '(display-mode: standalone)'
+    ]).subscribe((state: BreakpointState) => {
+      this.isPwa = state.breakpoints['(display-mode: standalone)'];
+      console.log('isPwa - ', this.isPwa);
+      if (window.navigator && window.navigator?.vibrate) {
+      window?.navigator?.vibrate([100, 50, 100]);
+
+      }
+
+    });
+
+
+    interval(60000 * 60).subscribe(() => {
       console.log('interval');
       this.updates.checkForUpdate();
     });
@@ -47,7 +79,7 @@ export class AppComponent implements OnInit{
     });
   }
 
-  addToHomeScreen() {
+  addToHomeScreen(): void {
     // hide our user interface that shows our A2HS button
     this.showButton = false;
     // Show the prompt
