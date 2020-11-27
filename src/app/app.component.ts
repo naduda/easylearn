@@ -1,15 +1,19 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { interval } from 'rxjs';
 import { Platform } from '@angular/cdk/platform';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { ConfirmDialogComponent, IConfirmDialog } from './diaolg/confirm-dialog/confirm-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
+import { filter } from 'rxjs/operators';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
   title = 'easylearn';
   deferredPrompt: any;
@@ -29,9 +33,11 @@ export class AppComponent implements OnInit{
   }
 
   constructor(
+    @Inject(DOCUMENT) private document: Document,
     private updates: SwUpdate,
     private platform: Platform,
     private breakpointObserver: BreakpointObserver,
+    private dialog: MatDialog,
   ) {
     this.isMobile = this.platform.IOS || this.platform.ANDROID;
 
@@ -54,7 +60,22 @@ export class AppComponent implements OnInit{
       console.log(event);
       this.updates
         .activateUpdate()
-        .then(() => document.location.reload());
+        .then(() => {
+          const data: IConfirmDialog = {
+            header: 'Heads Up!',
+            desc: 'Available new version. Do you want to install?',
+          };
+
+          this.dialog.open(ConfirmDialogComponent, {
+            data,
+            panelClass: ['p0'],
+            width: '25rem',
+            disableClose: true,
+          }).afterClosed()
+            .pipe(filter(Boolean))
+            .subscribe(() => this.document.location.reload());
+
+        });
     });
 
     this.updates.activated.subscribe((ev) => {

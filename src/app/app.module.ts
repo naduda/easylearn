@@ -8,16 +8,20 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ThemeService } from './theme/theme.service';
 import { ETheme } from './theme/utils/ETheme';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from './diaolg/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production, registrationStrategy: 'registerImmediately' }),
     PlatformModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
