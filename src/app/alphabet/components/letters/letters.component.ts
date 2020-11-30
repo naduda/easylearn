@@ -13,7 +13,7 @@ export class LettersComponent implements OnDestroy {
 
   letter = '';
   successButton = 'Yes';
-  rejectButton = 'No';
+  rejectButton = 'No&nbsp;';
 
   private success: Set<number> = new Set();
   private idx = 0;
@@ -62,7 +62,7 @@ export class LettersComponent implements OnDestroy {
   private init(lang: string): void {
     this.m = lang === 'uk' ? UKR_LETTERS : EN_LETTERS;
     this.successButton = lang === 'uk' ? 'Так' : 'Yes';
-    this.rejectButton = lang === 'uk' ? 'Ні' : 'No';
+    this.rejectButton = lang === 'uk' ? '&nbsp;Ні&nbsp;' : 'No&nbsp;';
     this.success = new Set();
     this.showNextLetter(false);
   }

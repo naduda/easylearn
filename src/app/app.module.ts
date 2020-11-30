@@ -12,6 +12,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { ConfirmDialogComponent } from './diaolg/confirm-dialog/confirm-dialog.component';
 import { ThemeService } from './theme/theme.service';
 import { ETheme } from './theme/utils/ETheme';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ETheme } from './theme/utils/ETheme';
     PlatformModule,
     MatDialogModule,
     MatMenuModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
