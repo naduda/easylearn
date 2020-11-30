@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EnglishComponent } from './components/english/english.component';
-import { UkraineComponent } from './components/ukraine/ukraine.component';
+import { LettersComponent } from './components/letters/letters.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'ukr' },
-  { path: 'ukr', component: UkraineComponent },
-  { path: 'eng', component: EnglishComponent },
+  { path: '', redirectTo: 'uk' },
+  { path: ':id', component: LettersComponent },
 ];
 
 @NgModule({

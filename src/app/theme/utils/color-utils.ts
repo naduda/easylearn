@@ -1,4 +1,4 @@
-export function shadeColor(color: string, percent: number) {
+export function shadeColor(color: string, percent: number): string {
   let R = parseInt(color.substring(1, 3), 16);
   let G = parseInt(color.substring(3, 5), 16);
   let B = parseInt(color.substring(5, 7), 16);
@@ -123,7 +123,7 @@ export function shadeColor(color: string, percent: number) {
 //   } : null;
 // }
 
-export function getColorPalette(color: string, colorText: string, secondText: string, prefix: string) {
+export function getColorPalette(color: string, colorText: string, secondText: string, prefix: string): any {
   return {
     [prefix + '-text']: colorText,
     [prefix + '-text-second']: secondText,

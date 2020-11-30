@@ -26,7 +26,7 @@ export class ConfirmDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: IConfirmDialog,
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.data.desc = this.data.desc || 'Are you sure?';
     this.data.acceptLabel = this.data.acceptLabel || 'Yes';
     this.data.rejectLabel = this.data.rejectLabel || 'No';
@@ -38,7 +38,7 @@ export class ConfirmDialogComponent implements OnInit {
     }
   }
 
-  close(accepted: boolean) {
+  close(accepted: boolean): void {
     this.ref.close(accepted);
   }
 

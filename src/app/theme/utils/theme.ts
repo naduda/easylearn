@@ -13,7 +13,6 @@ export const main: Theme = {
   }
 };
 
-
 // export const light: Theme = {
 //   name: 'light',
 //   properties: {
@@ -66,9 +65,9 @@ export const main: Theme = {
 //   }
 // };
 
-export function getThemePalette(colors: any) {
+export function getThemePalette(colors: any): any {
   return Object.entries(colors)
-    .reduce((result, [key, value], index, array) => {
+    .reduce((result, [key, value]) => {
       result[`--${key}`] = value;
       return result;
     }, {} as any);

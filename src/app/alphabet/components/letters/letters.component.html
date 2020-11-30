@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <main>
+    <span *ngIf="letter !== 'end'; else medalTmpl" [innerHTML]="letter"></span>
+    <ng-template #medalTmpl>
+      <div class="icon t_success" svgIcon="assets/img/medal.svg"></div>
+    </ng-template>
+  </main>
+
+  <footer *ngIf="letter !== 'end'">
+    <button class="btn_success"
+            [innerHTML]="successButton"
+            (click)="showNextLetter(true)">
+    </button>
+
+    <button class="btn_danger"
+            [innerHTML]="rejectButton"
+            (click)="showNextLetter(false)">
+    </button>
+  </footer>
+</div>

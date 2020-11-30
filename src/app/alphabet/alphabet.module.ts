@@ -1,17 +1,21 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { SvgModule } from '../svg-module/svg-module.module';
 import { AlphabetRoutingModule } from './alphabet-routing.module';
+import { LettersComponent } from './components/letters/letters.component';
 import { MainComponent } from './main.component';
-import { UkraineComponent } from './components/ukraine/ukraine.component';
-import { EnglishComponent } from './components/english/english.component';
-
 
 @NgModule({
-  declarations: [MainComponent, UkraineComponent, EnglishComponent],
+  declarations: [
+    MainComponent,
+    LettersComponent,
+  ],
   imports: [
     CommonModule,
-    AlphabetRoutingModule
+    HttpClientModule,
+    AlphabetRoutingModule,
+    SvgModule,
   ]
 })
 export class AlphabetModule { }

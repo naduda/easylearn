@@ -1,12 +1,12 @@
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { Platform } from '@angular/cdk/platform';
+import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, Inject, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { SwUpdate } from '@angular/service-worker';
 import { interval } from 'rxjs';
-import { Platform } from '@angular/cdk/platform';
-import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { ConfirmDialogComponent, IConfirmDialog } from './diaolg/confirm-dialog/confirm-dialog.component';
-import { MatDialog } from '@angular/material/dialog';
 import { filter } from 'rxjs/operators';
-import { DOCUMENT } from '@angular/common';
+import { ConfirmDialogComponent, IConfirmDialog } from './diaolg/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -36,8 +36,8 @@ export class AppComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document,
     private updates: SwUpdate,
     private platform: Platform,
-    private breakpointObserver: BreakpointObserver,
     private dialog: MatDialog,
+    breakpointObserver: BreakpointObserver,
   ) {
     this.isMobile = this.platform.IOS || this.platform.ANDROID;
 
@@ -49,7 +49,6 @@ export class AppComponent implements OnInit {
       this.isPwa = state.breakpoints['(display-mode: standalone)'];
       console.log('isPwa - ', this.isPwa);
     });
-
 
     interval(60000 * 60).subscribe(() => {
       console.log('interval');
