@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1606750409307,
+  "timestamp": 1606752772145,
   "index": "/easylearn/index.html",
   "assetGroups": [
     {
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/easylearn/4.cb71fb9b6632aaac7046.js",
+        "/easylearn/4.963a7eab3ea93132fce9.js",
         "/easylearn/favicon.ico",
         "/easylearn/index.html",
-        "/easylearn/main.2d9c65d51d293bbe3d33.js",
+        "/easylearn/main.432c9cdb1b058c7c4a4b.js",
         "/easylearn/manifest.webmanifest",
         "/easylearn/polyfills.bf99d438b005d57b2b31.js",
-        "/easylearn/runtime.8546194afda36b38cf64.js",
+        "/easylearn/runtime.364399e06b22dbe981c5.js",
         "/easylearn/styles.15a48443059d4bee9eb1.css"
       ],
       "patterns": [
@@ -47,7 +47,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/easylearn/4.cb71fb9b6632aaac7046.js": "fafb0fcbee8988577672bc3d9a48091fa9ce6656",
+    "/easylearn/4.963a7eab3ea93132fce9.js": "f59405e0836ae2bfbc3ffcc387c58b425b75dea6",
     "/easylearn/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/easylearn/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/easylearn/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -58,11 +58,11 @@
     "/easylearn/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/easylearn/assets/img/medal.svg": "163cb45de005d7507b87b78209207299b2bf8cb0",
     "/easylearn/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/easylearn/index.html": "d354497359803c81cb6a6a66bb8e2e067e7f9357",
-    "/easylearn/main.2d9c65d51d293bbe3d33.js": "88adda0792c3f49e3212ad352849b43f00ec6b05",
+    "/easylearn/index.html": "da8640cdfd58261fc68353084b5b6c589efabebe",
+    "/easylearn/main.432c9cdb1b058c7c4a4b.js": "6e9547a1f49faac0fecf34581cd4bc31262b02a6",
     "/easylearn/manifest.webmanifest": "5bf68e8f7c8a68ed81f793068c75d54226dfb197",
     "/easylearn/polyfills.bf99d438b005d57b2b31.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
-    "/easylearn/runtime.8546194afda36b38cf64.js": "1b7601715dd61e1e1ba35e23d0be8d2ca447536b",
+    "/easylearn/runtime.364399e06b22dbe981c5.js": "8c6a208a3cb3a1440c5d1ad2a40abcd51e7c9594",
     "/easylearn/styles.15a48443059d4bee9eb1.css": "161640bf9af39a1f5d7841b3712653c9765ec163"
   },
   "navigationUrls": [
