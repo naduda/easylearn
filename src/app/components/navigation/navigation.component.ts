@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 interface IMenuItem {
   title: string;
+  children: {
+    title: string;
+    routerLink: string;
+  }[];
 }
 
 @Component({
@@ -9,15 +13,16 @@ interface IMenuItem {
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.sass']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
 
   items: IMenuItem[] = [
-    { title: 'Алфавіт' },
+    {
+      title: 'Алфавіт',
+      children: [
+        { title: 'Український', routerLink: 'alphabet/uk' },
+        { title: 'English', routerLink: 'alphabet/en' },
+      ],
+    },
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
