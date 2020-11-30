@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1606468690588,
+  "timestamp": 1606748364083,
   "index": "/easylearn/index.html",
   "assetGroups": [
     {
@@ -11,14 +11,14 @@
         "ignoreVary": true
       },
       "urls": [
-        "/easylearn/4.f55d6803f0827deab396.js",
+        "/easylearn/4.f42b39bc4c93d596d4cd.js",
         "/easylearn/favicon.ico",
         "/easylearn/index.html",
-        "/easylearn/main.4123390eda37f3d13cab.js",
+        "/easylearn/main.7f62f3049467058a263b.js",
         "/easylearn/manifest.webmanifest",
         "/easylearn/polyfills.bf99d438b005d57b2b31.js",
-        "/easylearn/runtime.c57f3b65e02d6c23d273.js",
-        "/easylearn/styles.9dfdf4e166eec496316b.css"
+        "/easylearn/runtime.8013c4863f273abc6077.js",
+        "/easylearn/styles.d5d02342f5ab745890f6.css"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/.*"
@@ -39,14 +39,15 @@
         "/easylearn/assets/icons/icon-384x384.png",
         "/easylearn/assets/icons/icon-512x512.png",
         "/easylearn/assets/icons/icon-72x72.png",
-        "/easylearn/assets/icons/icon-96x96.png"
+        "/easylearn/assets/icons/icon-96x96.png",
+        "/easylearn/assets/img/medal.svg"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/easylearn/4.f55d6803f0827deab396.js": "a2b939a32353a7db065d490e40888543eb961a72",
+    "/easylearn/4.f42b39bc4c93d596d4cd.js": "70bc4b651885cae1781a01f56b9c8cd7536e3435",
     "/easylearn/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/easylearn/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/easylearn/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -55,13 +56,14 @@
     "/easylearn/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/easylearn/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/easylearn/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/easylearn/assets/img/medal.svg": "163cb45de005d7507b87b78209207299b2bf8cb0",
     "/easylearn/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/easylearn/index.html": "a4238a34ca154a1dc20dc738403f0e55c9846f9f",
-    "/easylearn/main.4123390eda37f3d13cab.js": "ce11d87102d4af5df00b4f205fa7937e8e63530e",
+    "/easylearn/index.html": "4956b43cb369f7c9f26d1e8b7d98f5d1d6467b4d",
+    "/easylearn/main.7f62f3049467058a263b.js": "cc87c8c999a4d244d26339e051fdb3f26701ad68",
     "/easylearn/manifest.webmanifest": "5bf68e8f7c8a68ed81f793068c75d54226dfb197",
     "/easylearn/polyfills.bf99d438b005d57b2b31.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
-    "/easylearn/runtime.c57f3b65e02d6c23d273.js": "fff0bec6d4fab611674806cee30111c1d1ba68b6",
-    "/easylearn/styles.9dfdf4e166eec496316b.css": "606dcf2b23f4dec769f2e2c6e56016adebf38d95"
+    "/easylearn/runtime.8013c4863f273abc6077.js": "668ebbf5be31d2aeaf252c20d7b467bf581eea11",
+    "/easylearn/styles.d5d02342f5ab745890f6.css": "f52387853f6f2379cf3e008d43756e38a209caec"
   },
   "navigationUrls": [
     {
