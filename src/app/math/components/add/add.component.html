@@ -1,0 +1,50 @@
+<div class="wrapper">
+  <div class="settings">
+    <div>
+      <span>Приклади в межах</span>
+      <input type="number" [(ngModel)]="maxValue">
+    </div>
+    <div>
+      <span>Кількість прикладів</span>
+      <input type="number" [(ngModel)]="exCount">
+    </div>
+  </div>
+  <hr>
+
+  <main *ngIf="!end">
+    <div *ngFor="let item of items; let idx = index;" class="ex">
+      <div>
+        <span [innerHTML]="item.a"></span>
+        <span class="mx-2">+</span>
+        <span [innerHTML]="item.b"></span>
+        <span class="mx-2">=</span>
+        <input type="number" [(ngModel)]="item.r">
+        <span class="mx-2"></span>
+      </div>
+      <button *ngIf="items.length === idx + 1"
+              class="btn_primary"
+              [disabled]="!item.r"
+              (click)="showEx()">
+        Далі
+      </button>
+    </div>
+  </main>
+
+  <ng-container *ngIf="end">
+    <footer *ngIf="!best" class="settings">
+      <div class="t_success">
+        <span>Правильно</span>
+        <span [innerHTML]="positive"></span>
+      </div>
+      <div class="t_danger">
+        <span>Не правильно</span>
+        <span [innerHTML]="negative"></span>
+      </div>
+    </footer>
+    <hr>
+
+    <div *ngIf="best" class="best">
+      <div class="icon t_success" svgIcon="assets/img/medal.svg"></div>
+    </div>
+  </ng-container>
+</div>

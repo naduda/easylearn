@@ -1,5 +1,7 @@
 import { PlatformModule } from '@angular/cdk/platform';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,7 +14,6 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { ConfirmDialogComponent } from './diaolg/confirm-dialog/confirm-dialog.component';
 import { ThemeService } from './theme/theme.service';
 import { ETheme } from './theme/utils/ETheme';
-import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatDialogModule,
     MatMenuModule,
     MatButtonModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

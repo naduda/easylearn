@@ -23,6 +23,12 @@ export class NavigationComponent {
         { title: 'English', routerLink: 'alphabet/en' },
       ],
     },
+    {
+      title: 'Математика',
+      children: [
+        { title: 'Додавання', routerLink: 'math/add' },
+      ],
+    }
   ];
 
 }
