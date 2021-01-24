@@ -15,11 +15,12 @@ interface IEx {
 export class AddComponent {
 
   maxValue = 10;
-  exCount = 10;
+  exCount = 3;
   items: IEx[] = [];
 
   positive = 0;
   negative = 0;
+  gcount = 0;
   end = false;
   best = false;
 
@@ -66,6 +67,21 @@ export class AddComponent {
   }
 
   private generate(v: number): number {
-    return Math.floor(Math.random() * v);
+    const n = Date.now().toString();
+    const r = this.gcount % 2 === 0 ? +n.substring(n.length - 1) : +n.substring(n.length - 2, n.length - 1);
+    if (r > 0 && r <= v) {
+      this.gcount++;
+      return r;
+    }
+
+    const ms = +n.substring(n.length - 2);
+    this.sleep(ms);
+    return this.generate(v);
+  }
+
+  private sleep(miliseconds: number) {
+    var currentTime = new Date().getTime();
+    while (currentTime + miliseconds >= new Date().getTime()) {
+    }
   }
 }
