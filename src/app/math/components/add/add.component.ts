@@ -17,12 +17,11 @@ interface IEx {
 export class AddComponent {
 
   maxValue = 10;
-  exCount = 10;
+  exCount = 3;
   items: IEx[] = [];
 
   positive = 0;
   negative = 0;
-  gcount = 0;
   end = false;
   best = false;
 
@@ -42,6 +41,10 @@ export class AddComponent {
     }
 
     const expected = this.generate(this.maxValue);
+    if (expected < 1) {
+      this.showEx();
+      return;
+    }
     const a = this.generate(expected);
     const ex: IEx = {
       a,
@@ -49,7 +52,27 @@ export class AddComponent {
       expected,
     };
 
+    if (this.itemsContains(ex)) {
+      this.showEx();
+      return;
+    }
+
     this.items.push(ex);
+  }
+
+  checkMaxEx(): void {
+    if (this.exCount > 20) {
+      setTimeout(() => this.exCount = 20, 0);
+    }
+  }
+
+  private itemsContains(v: IEx): boolean {
+    for (const it of this.items) {
+      if (it.a === v.a && it.b === v.b) {
+        return true;
+      }
+    }
+    return false;
   }
 
   private start(): void {
@@ -75,21 +98,7 @@ export class AddComponent {
   }
 
   private generate(v: number): number {
-    const n = Date.now().toString();
-    const r = this.gcount % 2 === 0 ? +n.substring(n.length - 1) : +n.substring(n.length - 2, n.length - 1);
-    if (r > 0 && r <= v) {
-      this.gcount++;
-      return r;
-    }
-
-    const ms = +n.substring(n.length - 2);
-    this.sleep(ms);
-    return this.generate(v);
+    return Math.floor(Math.random() * v);
   }
 
-  private sleep(miliseconds: number) {
-    var currentTime = new Date().getTime();
-    while (currentTime + miliseconds >= new Date().getTime()) {
-    }
-  }
 }
