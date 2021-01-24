@@ -11,9 +11,9 @@
   </div>
   <hr>
 
-  <main *ngIf="!end">
+  <main *ngIf="!best">
     <div *ngFor="let item of items; let idx = index;" class="ex">
-      <div>
+      <div [class.t_success]="item.pos" [class.t_danger]="item.neg">
         <span [innerHTML]="(idx + 1) + '.'"></span>
         <span class="mx-2"></span>
         <span [innerHTML]="item.a"></span>

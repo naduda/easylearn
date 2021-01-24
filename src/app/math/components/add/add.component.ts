@@ -5,6 +5,8 @@ interface IEx {
   b: number;
   r?: number;
   expected: number;
+  pos?: boolean;
+  neg?: boolean;
 }
 
 @Component({
@@ -29,7 +31,11 @@ export class AddComponent {
   }
 
   showEx(): void {
-    if (this.items.length >= this.exCount) {
+    if (this.end) {
+      this.start();
+      return;
+    }
+    if (this.items.length === this.exCount) {
       this.checkResults();
       this.end = true;
       return;
@@ -58,8 +64,10 @@ export class AddComponent {
   private checkResults(): void {
     for (const ex of this.items) {
       if (ex.r === ex.expected) {
+        ex.pos = true;
         this.positive++;
       } else {
+        ex.neg = true;
         this.negative++;
       }
     }
