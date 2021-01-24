@@ -14,11 +14,13 @@
   <main *ngIf="!end">
     <div *ngFor="let item of items; let idx = index;" class="ex">
       <div>
+        <span [innerHTML]="(idx + 1) + '.'"></span>
+        <span class="mx-2"></span>
         <span [innerHTML]="item.a"></span>
         <span class="mx-2">+</span>
         <span [innerHTML]="item.b"></span>
         <span class="mx-2">=</span>
-        <input type="number" [(ngModel)]="item.r">
+        <input type="number" [disabled]="items.length !== idx + 1" [(ngModel)]="item.r">
         <span class="mx-2"></span>
       </div>
       <button *ngIf="items.length === idx + 1"
