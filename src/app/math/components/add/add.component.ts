@@ -17,7 +17,7 @@ interface IEx {
 export class AddComponent {
 
   maxValue = 10;
-  exCount = 3;
+  exCount = 10;
   items: IEx[] = [];
 
   positive = 0;
